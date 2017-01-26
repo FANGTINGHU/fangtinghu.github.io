@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Blog</title>
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">   
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     
+    <style>
+        .clearfix::after{content: '';display: block;clear: both;}
+html {
+    width:100%;
+    height:100%;
+    font-size: 60.5%;
+}
+body {
+    margin: 0 auto;
+   font-size: 1.2rem;
+    font-family: sans-serif,"Microsoft Jhenghei";
+    background-image: url(images/hhh.jpg);
+}  
+        
+        *,*::before,*::after{box-sizing: border-box;}
+        a:link,a:visited,a:hover,a:active{text-decoration: none;}
+.jumbotron {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+}
+      
+       
+        /*carousel*/
+        .carousel {margin-top: 30px; background-image: url(images/hhh.jpg) ;}
+        .carousel-control {z-index: 10; margin-top: 60px;background-image:none !important;filter:none !important;}
+        
+        .container{position: relative;
+        height: 300px;width: 600px; overflow: hidden;margin-top: 30px;}
+       .container img 
+       {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    height: 300px;
+    max-width: none;
+    min-width:100%;
+    
+}
+   
+     .navbar-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+       z-index: 11;
+     height: 30px
+    }
+         .navbar-wrapper .navbar {z-index: 9;position: relative;border-radius: 8px;letter-spacing: 1px;  
+
+    }
+        .navbar .navbar-brand{padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+      font-size: 16px;
+      font-weight: bold;}
+     /*thumbnail*/
+        .main {margin-top: 30px;padding: 20px;}
+        .row img { height:300px;}
+        .row .thumbnail-view,.thumbnail-view .caption .category::before{border-bottom: 3px solid;border-color: #6699ff;}
+        .row .thumbnail-meal,.thumbnail-meal .caption .category::before{border-bottom: 3px solid;border-color: #004de6;} 
+        .row .thumbnail-dessert,.thumbnail-dessert .caption .category::before{border-bottom: 3px solid;border-color: #003399;}
+        .thumbnail .caption{padding: 10px;}
+        .caption .category{margin: 15px 9px 10px;color: #7575a3;letter-spacing: 1px;font-weight: bold;}
+        .caption .category::before{content: '';display: inline-block;width: 19px;height: 19px;margin-right: 5px;border: 2px solid;border-radius: 50%;vertical-align: -5px;}
+        /*footer*/
+        .footer{width: 100%;padding: 20px 0 30px;background: black;color: #fff;text-decoration: none;}
+        .horizontal-list{margin: 0 auto;text-align: right;color: #fff;}
+        .horizontal-list .horizontal-item{display: inline-block;padding: 0 15px;letter-spacing: 1px;text-decoration: none;color: #fff;}
+        .horizontal-list .horizontal-item+.horizontal-item{border-left: 1px solid #bbb;}
+</style>
+    </head>
+    
+<body>
+     <!--navbar-->
+     <div class="navbar-wrapper">
+     
+     <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">Blog</a>
+    </div>
+     <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+         <li class="active"><a href="#">Home</a></li>
+         <li><a href="#">About</a></li>
+         <li><a href="#">Contact</a></li>
+         <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Category<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="#">觀光</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">購物</a></li>
+                  </ul>
+                  </li>
+         
+         
+     </ul>
+         </div>
+         </div>
+         </nav>
+         </div>
+   
+    <div id="slideshow" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">            <div class="container">
+                <img src="images/1146.jpg"  alt="picture"></div>
+            
+                <div class="carousel-caption"><h3>景緻</h3></div></div>
+            <div class="item">            <div class="container">
+                <img src="images/1144.jpg"  alt="picture"></div><div class="carousel-caption"><h3>甜點</h3></div></div>
+            <div class="item">            <div class="container">
+                <img src="images/1170.jpg"  alt="picture"></div> <div class="carousel-caption"><h3>主餐</h3></div></div>
+        </div>
+        <div class="control-btn">
+            <a href="#slideshow" class="left carousel-control" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> </a>
+            <a href="#slideshow" class="right carousel-control" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> </a>
+        </div>
+        <ol class="carousel-indicators">
+            <li data-target="#slideshow" data-slide-to="0"></li>  <li data-target="#slideshow" data-slide-to="1"></li>
+              <li data-target="#slideshow" data-slide-to="2"></li>
+        </ol>
+        </div>
+    <div class="main">
+    <div class="container-row">
+    <div class="row">
+        <div class="col-xs-12 col-md-4 "><div class="thumbnail thumbnail-view"><img src="images/1149.jpg" alt="picture" ><div class="caption"><div class="category">Information</div> <p>古書と茶房 （ことばのはおと）<br>京都市上京区油小路通下長者町下ル大黒屋町34<br>+81 75-414-2050<br>11:30~19:30  週一、週二休<br>來到京都別錯過這家古樸的町家咖啡店，享受道地的日式風情~</p>
+            <p><a class="btn" href="#">more »</a></p></div></div></div>
+           
+
+  
+        <div class="col-xs-12 col-md-4 "><div class="thumbnail thumbnail-meal"><img src="images/1150.jpg"  alt="picture"><div class="caption"><div class="category">Meal</div> <p>今天的主食是炸豬排，還有豐盛新鮮的蔬菜，不用擔心吃的不健康，能感受到老闆的用心，雖然等待時間有點久。</p>
+          <p><a class="btn" href="#">more »</a></p></div></div>
+
+    </div>
+    <div class="col-xs-12 col-md-4 "><div class="thumbnail thumbnail-dessert"><img src="images/1151.jpg"  alt="picture"><div class="caption"><div class="category">Dessert</div> <p>飯後甜點-即使冬天也要吃冰!<br>可愛的貓咪造型~</p> <p><a class="btn" href="#">more »</a></p></div></div></div></div>
+        </div>
+         <div class="container-row">
+    <div class="row">
+        <div class="col-xs-12 col-md-4 "><div class="thumbnail thumbnail-view"><img src="images/1158.jpg" alt="picture" ><div class="caption"><div class="category">Information</div><p>GOSPEL ゴスペル<br>地址：京都市左京区浄土寺上南田町36<br>營業時間：12：00～23：00 ＊每週二公休<br>哲學之道旁的老洋房咖啡，牆面爬滿了藤蔓，非常優雅莊嚴。</p> 
+            <p><a class="btn" href="#">more »</a></p></div></div></div>
+           
+
+  
+        <div class="col-xs-12 col-md-4 "><div class="thumbnail thumbnail-meal"><img src="images/1161.jpg"  alt="picture"><div class="caption"><div class="category">Meal</div> <p>漢堡排的肉軟嫩且多汁，搭配濃郁的醬汁，令人驚豔。</p>
+          <p><a class="btn" href="#">more »</a></p></div></div>
+
+    </div>
+    <div class="col-xs-12 col-md-4 "><div class="thumbnail thumbnail-dessert"><img src="images/1159.jpg"  alt="picture"><div class="caption"><div class="category">Dessert</div> <p>在有年代感的西式洋房裡品嚐美味的英式下午茶~</p> <p><a class="btn" href="#">more »</a></p></div></div></div></div>
+        </div>
+    </div>
+    <footer class="footer">
+        <ul class="horizontal-list">
+            <li class="horizontal-item"><a href="#">ABOUT ME</a></li>
+            <li class="horizontal-item"><a href="#">SITE MAP</a></li>
+            <li class="horizontal-item"><a href="#">CONTACT</a></li>
+        </ul>
+    </footer>
+</body>
